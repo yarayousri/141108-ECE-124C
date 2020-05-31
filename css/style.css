@@ -1,0 +1,41 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: orange;
+}
+
+ul li {
+    float: right;
+    padding-right: 30px;
+    font-weight: bold;
+}
+
+ul li a {
+    color: white;
+    display: inline-block;
+}
+
+.logo img {
+    height: 60px;
+    padding-left: 60px;
+    width: 400px;
+}
+
+.row img {
+    height: 400px;
+    width: 1000px;
+    border: white 1px;
+    padding: 2px;
+    text-align: left;
+}
+
+.container h2 {
+    color: white;
+}
+
+.container p {
+    color: white;
+}

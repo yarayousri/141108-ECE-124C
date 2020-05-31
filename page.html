@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>The Registration Form</title>
+    <link href="css/style1.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        function validate() {
+            var text = document.getElementById("text1").value;
+            var a = document.getElementById("text2").value;
+            var regx = /^([A-Za-z 0-9\.-]+)@([a-z 0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+            var x = /^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/;
+            if (regx.test(text) && x.test(a)) {
+                document.getElementById("lbltext").innerHTML = "valid";
+                document.getElementById("lbltext").style.visibility = "visible";
+                document.getElementById("lbltext").style.color = "green";
+            } else {
+                document.getElementById("lbltext").innerHTML = "Invalid";
+                document.getElementById("lbltext").style.visibility = "visible";
+                document.getElementById("lbltext").style.color = "red";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="index.html" method="post">
+        <input type="text" placeholder="first name" required>
+        <br>
+        <input type="text" placeholder="last name" required>
+        <br>
+        <input id="text1" placeholder="Email" type="text" required>
+        <br>
+        <label id="lbltext" style="color:red;visibility:hidden"> Invalid</label>
+        <br>
+        <input id="text2" placeholder="cellphone" type="text" required>
+        <br>
+        <input type="text" placeholder="addres" required>
+        <input type="password" id="psw" name="psw" pattern="[A-Z]+(?=.*\d)(?=.*[a-z]).{7}" title="Must contain at least one number and one uppercase and lowercase letter, and only 8 characters" required>
+        <label for="select"></label>
+        <select name="cars" id="cars"> <option value="other">Other</option> <option value="male">Male</option> <option value="female">Female</option> </select>
+        <input type="submit" value="Submit" onclick="validate()">
+    </form>
+    <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">must start with <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">only<b>8 characters</b></p>
+    </div>
+    <a href="index.html">Click here to go to The Website of Healthy Food</a>
+</body>
+
+</html>
