@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HEALTY FOOD
+    </title>
+    <style>
+        body {
+            bacground: black;
+        }
+        
+        #example1 {
+            background-image: url(image/org1.jpg);
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            padding: 30px;
+            height: 750px;
+            width: 1000px;
+        }
+        
+        ul li {
+            float: right;
+            padding-right: 30px;
+            font-weight: bold;
+        }
+        
+        ul li a {
+            color: gray;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="about.html">ABOUT US </a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li>
+            <a href="index.html">HOME </a></li>
+    </ul>
+    <p id="demo"></p>
+    <script>
+        var day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+        }
+        document.getElementById("demo").innerHTML = "Today is " + day;
+    </script>
+    <p id="demo">Good Evening!</p>
+    <script>
+        if (new Date().getHours() < 18) {
+            document.getElementById("demo").innerHTML = "Good day!";
+        }
+    </script>
+    <div id="example1">
+        <h2>Organic food</h2>
+    </div>
+</body>
+
+</html>
